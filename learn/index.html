@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="../styles.css?v=2">
     </head>
     <body style="background-color:black;">
-        <header>
+        <header style="background-color:black;">
             <a href="/"><img src="../images/ncmeshnet.jpg" class="logo" alt="Logo for NC Meshnet" title="NC Meshnet"/></a>
             <!--<button onclick="document.getElementById('event').showModal()" class="default meet-button">📅 Upcoming Meeting</button>-->
         </header>
@@ -78,30 +78,30 @@
                 </menu>
             </nav>
             <hgroup>
-                <h1>Learn about Austin Mesh and Meshtastic</h1>
-                <p>Austin Mesh is a community group working to build a mesh network of solar-powered <a href="https://meshtastic.org/">meshtastic</a> radios in Austin. This network acts like a city-wide text messaging system, allowing people to communicate publicly or privately with anyone on the network. All of this happens without any external infrastructure - no power, no cell phone towers, no internet.</p>
+                <h1>Learn about NC Meshnet and Meshtastic</h1>
+                <p>NC Meshnet is a community group working to build a mesh network of <a href="https://meshtastic.org/">meshtastic</a> radios across North Carolina. This network acts like a regional text messaging system, allowing people to communicate publicly or privately with anyone on the network. With solar nodes, all of this can happen without any external infrastructure - no power, no cell phone towers, no internet.</p>
             </hgroup>
             <ul>
-                <li><a href="#about">About Austin Mesh and Meshtastic</a>
+                <li><a href="#about">About NC Meshnet and Meshtastic</a>
                     <ul>
-                        <li>How does it work?</li>
+                        <li><a href="#how">How does it work?</a></li>
                         <li><a href="#eli5">Explain it like I'm 5</a></li>
-                        <li>What can it do?</li>
-                        <li>Why build this network?</li>
+                        <li><a href="#what">What can it do?</a></li>
+                        <li><a href="#why">Why build this network?</a></li>
                     </ul>
                 </li>
                 <li><a href="#coverage">Network coverage in Austin</a></li>
                 <li><a href="#comparisons">Comparisons to similar technology</a></li>
             </ul>
             <section id="about">
-                <h2>All about Austin Mesh and Meshtastic</h2>
-                <h3>How does it work?</h3>
-                <p>We have set up a number of solar-powered radio repeaters in Austin. These radios communicate on the <a href="https://en.wikipedia.org/wiki/33-centimeter_band">906.875 MHZ</a> frequency using the <a href="https://en.wikipedia.org/wiki/LoRa">LoRa protocol</a>. The radios mesh using the open-source <a href="https://meshtastic.org/">Meshtastic</a> software. Users can connect to these repeaters by Bluetooth if they’re close enough or they can use their own handheld nodes which will also act as repeaters. The messages hop from node to node, extending the reach of the network and ensuring everyone receives every message.</p>
+                <h2>All about NC Meshnet and Meshtastic</h2>
+                <h3 id="how">How does it work?</h3>
+                <p>We have set up a number of repeaters across North Carolina. These radios communicate on the <a href="https://en.wikipedia.org/wiki/33-centimeter_band">906.875 MHZ</a> frequency using the <a href="https://en.wikipedia.org/wiki/LoRa">LoRa protocol</a>. The radios mesh using the open-source <a href="https://meshtastic.org/">Meshtastic</a> software. Users can connect to these repeaters with their own handheld nodes (which will also act as repeaters). The messages hop from node to node, extending the reach of the network and ensuring everyone receives every message.</p>
                 <h3 id="eli5">Can you explain it like I'm 5?</h3>
                 <p>Pretend you're sitting in class and want to send a note to everyone in the class. You write your note on a piece of paper and copy it three times. The message can be up to 228 characters - about as long as this paragraph so far. You hand those three pieces of paper to the three people around you. Then those three people re-write the message three times and hand it to the three people around them and so on. Now imagine a big gust of wind comes and blows away some of the messages. If even just a few people saw the note and keep copying and re-sending it, eventually everyone will get a copy of the note. This is like sending an unencrypted message to everyone on the network.</p>
                 <p>Now imagine you want to send a message to a single person or a select group of people but you don't want other people who see the note to be able to read it. You could write the note using a secret language. You could then hand a decoder key to your friend or to a group of friends and they could decode the message. The message still gets passed the same way - with every single person writing the message a few times and handing it to everyone - but only those people with the decoder key will be able to understand the message. This is like sending an encrypted direct message or encrypted group message.</p>
-                <p>Austin Mesh works the same way as this paper example, but instead of sending paper notes we're using digital text messages and sending it with radio waves. Our radios are solar powered and they don’t need any internet or cell phone coverage. This means they will work even if the power is out.</p>
-                <h3>What can it do?</h3>
+                <p>NC Meshnet works the same way as this paper example, but instead of sending paper notes we're using digital text messages and sending it with radio waves. Our radios don’t need any internet or cell phone coverage. This means they will work even if the power is out.</p>
+                <h3 id="what">What can it do?</h3>
                 <p>Meshtastic is a bit like a decentralized social media platform or SMS text messaging. It has a number of different features which will be familiar to anyone who has sent a text message or posted on social media.</p>
                 <dl>
                     <dt>1) Primary Channel:</dt>
@@ -117,20 +117,20 @@
                     <dt>6) Telemetry Data:</dt>
                     <dd>Nodes can be set up to send telemetry data like the battery status or signal strength, which is helpful for monitoring remote solar-powered nodes. Nodes can also have sensors connected to them which allow them to send data on temperature, humidity, or air pressure which allow them to act like weather stations.</dd>
                 </dl>
-                <h3>Why build this network?</h3>
+                <h3 id="why">Why build this network?</h3>
                 <h4>1) Community</h4>
-                <p>Because this is essentially a city-wide group text message chain we are hoping people use the network to build community. Tell the group where your band is playing tonight, chat about local politics, ask for a good cheese dip recipe, etc.</p>
+                <p>Because this is essentially a state-wide text message chain we are hoping people use the network to build community. Tell the group where your band is playing tonight, chat about local politics, ask for a good cheese dip recipe, etc.</p>
                 <h4>2) Disasters</h4>
-                <p>If the power goes out, like during the 2021 Winter Storm Uri, this network should allow people to continue to communicate with each other without electricity, cell phone coverage, or internet. This big city-wide group text chain could allow people to ask for help or offer assistance. People could get information about where warming centers are open or ask who in their neighborhood still has power. People could also send encrypted direct messages to check in on friends and family or they could send encrypted group messages to coordinate privately in a group.</p>
+                <p>If the power goes out, this network should allow people to continue to communicate with each other without electricity, cell phone coverage, or internet. This big state-wide group text chain could allow people to ask for help or offer assistance. People could get information about where shelters are open or ask who in their neighborhood still has power. People could also send encrypted direct messages to check in on friends and family or they could send encrypted group messages to coordinate privately in a group.</p>
                 <h4>3) Decentralized, Open, and Resilient</h4>
-                <p>Austin Mesh is decentralized - there is no central server or corporation - all the communication bounces through the entire mesh. Austin Mesh is open to everyone - you don't have to ask permission to join and all of the software is open-source. Austin Mesh is resilient - our solar-powered radios don't need cell phone towers, internet access, or electricity. We hope this project will inspire others to build things that are decentralized, open, and resilient.</p>
+                <p>NC Meshnet is decentralized - there is no central server or corporation - all the communication bounces through the entire mesh. NC Meshnet is open to everyone - you don't have to ask permission to join and all of the software is open-source. NC Meshnet is resilient - many radios in the mesh are solar-powered and don't need cell phone towers, internet access, or electricity. We hope this project will inspire others to build things that are decentralized, open, and resilient.</p>
             </section>
             <section id="coverage">
-                <h2>What kind of coverage does the Austin Mesh network have?</h2>
-                <p>As of Summer 2024 we have coverage throughout most of downtown, central, and East Austin. We have intermittent coverage in South, Southwest (all the way to Dripping Springs), North, and even all the way up to Leander. We're actively working to expand this coverage.</p>
-                <p>We now have a coverage map showing nodes seen over the last year:</p>
+                <h2>What kind of coverage does NC Meshnet have?</h2>
+                <p>As of Summer 2024, the mesh stretches from Raleigh to Chimney Rock, with numerous nodes in western VA.  Coverage varies widely.  The best coverage areas currently are in Guilford, Forsyth, Davidson, and Catawba Counties. We're actively working to expand this coverage.</p>
+                <!--<p>We now have a coverage map showing nodes seen over the last year:</p>
                 <iframe src="https://graphs.austinmesh.org/d-solo/ddpwwgtdxf2m8f/austin-mesh?orgId=1&from=now-1y&to=now&panelId=10" height="400" frameborder="0"></iframe>
-                <p><a href="https://meshmap.net/">The MQTT map at meshmap.net</a> is <b>not</b> representative of the coverage as we <a href="/join/#best-practices">do not recommend using MQTT</a> however it may still be useful for you to see what is in your area. Another <a href="https://canvis.app/meshtastic-map">map of <b>self reported</b> nodes</a> is also available, but more likely to be out-of-date.</p>
+                <p><a href="https://meshmap.net/">The MQTT map at meshmap.net</a> is <b>not</b> representative of the coverage as we <a href="/join/#best-practices">do not recommend using MQTT</a> however it may still be useful for you to see what is in your area. Another <a href="https://canvis.app/meshtastic-map">map of <b>self reported</b> nodes</a> is also available, but more likely to be out-of-date.</p>-->
             </section>
             <section id="comparisons">
                 <h2>Comparing it to APRS on Ham Radio</h2>
@@ -165,10 +165,7 @@
             </section>
         </main>
         <footer>
-            <p>Our website content is licensed under Creative Commons
-                <br>feel free to use if for your club's website: <a href="https://github.com/austinmesh/www">Github</a>
-                <br>If we've inspired you, please <a href="mailto:info@austinmesh.org">email us</a>!
-            <br>This site is (c) by Tommy Ekstrand and is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</p>
+            <p><small><small>This website is a fork of Austin Mesh's <a href="https://www.austinmesh.org/">site</a> (which is (c) by Tommy Ekstrand and is licensed <br>under a Creative Commons Attribution-ShareAlike 4.0 International License)</small></small>
         </footer>
     </body>
     <script>
