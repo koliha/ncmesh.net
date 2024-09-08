@@ -6,10 +6,10 @@
     --color-canvasText: #2C2D3C;
     --color-canvasTextDark: #107633;
     --color-canvasTextDarker: #062c13;
-    --ly-brand: black;
+    --ly-brand: #67EA94;
     --accent: #2ce26a;
     --dark-accent: #67EA94;
-    --ly-bg-brand: black;
+    --ly-bg-brand: #67EA94;
     --color-primaryDark: #2ce26a;
     background-color: black;
 }
