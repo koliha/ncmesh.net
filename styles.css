@@ -11,6 +11,7 @@
     --dark-accent: #67EA94;
     --ly-bg-brand: #67EA94;
     --color-primaryDark: #2ce26a;
+    background-color: black;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -22,7 +23,7 @@
 }
 body > header {
     align-items: center;
-    background-color: var(--ly-brand);
+    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,10 +60,12 @@ header.loaded .meet-button {
 main {
     margin: 0 auto 40px;
     max-width: 900px;
+    background-color: black;
 }
 footer {
     margin: 0 auto !important;
     max-width: 900px;
+    background-color: black;
 }
 .partner-logos {
     display: flex;
