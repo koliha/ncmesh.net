@@ -103,6 +103,6 @@ footer {
     }
 }
 menu > li:has(> menu)::after {
-    content: " ▾";
+    content: "*";
     display: inline-block;
 }
