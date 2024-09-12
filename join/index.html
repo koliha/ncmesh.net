@@ -112,7 +112,8 @@
             </section>
             
             <section id="network">
-                <h2>Connect to the network</h2>
+                <h2>Connect to the network </h2>
+                <h3>Quick Setup Guide</h3>
                 <ol>
                     <li>
                         Get a Meshtastic Radio.
@@ -121,20 +122,139 @@
                         <br> If you can afford it, and have a place to mount it outside, we recommend you buy a pre-built solar-powered node for between $100 and $200 on Etsy and mount it as high off the ground as you can. Alternatively you can <a href="/devices/">build your own</a>.
                     </li>
                     <li>Download the <a href="https://meshtastic.org/docs/software">Meshtastic App</a> on your iPhone or Android.</li>
-                    <li>Pair your radio to your phone with Bluetooth.</li>
+                    <li>Pair your radio to your phone with Bluetooth</li>
                     <li>Open the Meshtastic app and say hi!</li>
+                </ol>
+                <h3>Detailed Setup Guide</h3>
+                <ol>
+                    <li>
+                        Get a Meshtastic Radio.
+                        <br> You can build one yourself for about $35. The official Meshtastic page keeps a current list of <a href="https://meshtastic.org/docs/hardware/devices/">Supported Hardware.</a> The LILYGO T-Echo is a good first meshtastic radio, as it costs around $70 and is ready to go out of the box (besides having to flash the firmware).
+                        <br> You can also buy a pre-built battery-powered radio for between $50-$100 on Etsy or eBay - these usually have 3D printed cases.
+                        <br> If you can afford it, and have a place to mount it outside, we recommend you buy a pre-built solar-powered node for between $100 and $200 on Etsy and mount it as high off the ground as you can. Alternatively you can <a href="/devices/">build your own</a>.
+                    </li>
+                    <li>Download the <a href="https://meshtastic.org/docs/software">Meshtastic App</a> on your iPhone or Android.</li>
+                    <li>Pair your radio to your phone with Bluetooth</li>
+                    <li>Open the Meshtastic app</li>
+                    <li>Settings -> LoRa</li>
+                    <ul>
+                        <li>Region: United States</li>
+                        <li>Use Preset: on</li>
+                        <li>Presets: Long Range - Fast</li>
+                        <li>Ignore MQTT: off</li>
+                        <li>Transmit Enabled: on</li>
+                        <li>Number of hops: 4</li>
+                        <li>Frequency Slot: 0</li>
+                        <li>RX Boosted Gain: On</li>
+                        <li>Frequency override: 0</li>
+                        <li>Transmit power: 30dBm</li>
+                        <li>Click Save</li>
+                    </ul>
+                    <li>Settings -> Channels</li>
+                    <ul>
+                        <li>Click on Primary Channel</li>
+                        <li>Do not modify channel details</li>
+                        <li>Postions Enabled: on</li>
+                        <li>Approximate Location: 0.2mi (larger if you have privacy concerns)</li>
+                        <li>MQTT Uplink Enabled: on</li>
+                        <li>MQTT Downlink Enabled: on</li>
+                        <li>Click Save</li>
+                        <li>Click Add Channel</li>
+                        <li>Name: NCMESH  (all upper case!)</li>
+                        <li>Key size: Default</li>
+                        <li>Channel Role: Secondary</li>
+                        <li>Allow Position Requests: On</li>
+                        <li>Approximate Location: 0.2mi (larger if you have privacy concerns)</li>
+                        <li>MQTT Uplink Enabled: on</li>
+                        <li>MQTT Downlink Enabled: on</li>
+                        <li>Click Save</li>
+                    </ul>
+                    <li>Settings -> User</li>
+                    <ul>
+                        <li>Long name: Name your node (up to 36 characters, shown on node list)</li>
+                        <li>Short name: Short name for your node (up to 4 characters)</li>
+                        <li>Licensed Operator (HAM mode): Off</li>
+                    </ul>
+                    <li>Settings -> Device</li>
+                    <ul>
+                        <li>Device Role: Client</li>
+                        <li>Rebroadcast Mode: All</li>
+                        <li>Node Info Broadcast Inteval: One Hour</li>
+                        <li>Double Tap as Button: off</li>
+                        <li>LED Heartbeat: off if using a solar or battery powered device (to conserve energy)</li>
+                        <li>Serial Console: on</li>
+                        <li>Debug Log: off</li>
+                        <li>Time zone: leave at default</li></lo>
+                        <li>Button GPIO: Unset</li>
+                        <li>Buzzer GPIO: Unset</li>
+                    </ul>
+                    <li>Settings -> Position</li>
+                    <ul>
+                        <li>Broadcast Interval: 1 hour</li>
+                        <li>Smart Position: on</li>
+                        <li>Minimum Interval: Ten Minutes</li>
+                        <li>Minimum Distance: 100</li>
+                        <li>Device GPS: Enabled if your device has GPS, Not Present if your device does not</li>
+                        <li>Update Interval: Five Minutes</li>
+                        <li>Position Flags: Only enable metrics you need.  Suggest enabling altitude and # of satellites only.</li>
+                        <li>Altitude is mean sea level: on</li>
+                        <li>Altitude geoidal separation: off</li>
+                        <li>Dilution of precision: on</li>
+                        <li>If DOP is set, use HDOP: off</li>
+                        <li>Advanced device GPS: all options should be "Unset"</li>
+                    </ul>
+                    <li>Settings -> MQTT</li>
+                    <ul>
+                        <li>Enabled: on</li>
+                        <li>MQTT Client Proxy: on</li>
+                        <li>Disconnect from MQTT: on (if it says connect to mqtt, click the slider and it will say disconnect instead)</li>
+                        <li>Encryption Enabled: on</li>
+                        <li>Map Report, Enabled: on</li>
+                        <li>Map Publish Interval: One Hour</li>
+                        <li>Precise location: off</li>
+                        <li>Approximate location: 0.2mi</li>
+                        <li>Root Topic: msh/US (case sensitive)</li>
+                        <li>Address: mqtt.ncmesh.net</li>
+                        <li>Username: meshdev</li>
+                        <li>Password: large4cats</li>
+                        <li>TLS Enabled: off</li>
+                    </ul>
+                    <li>Extra Credit (Neighbor Info Broadcast)</li>
+                    <ol>
+                       <li>Turn off bluetooth on your mobile device or disconnect from your node in-app</li>
+                       <li>Visit: https://client.meshtastic.org</li>
+                       <li>Click new connection -> bluetooth -> new device</li>
+                       <li>Find your device in the list and click pair</li>
+                       <li>Your device should be listed on the webpage Connect New Device Dialog - click it</li>
+                       <li>Click Config on the left side</li>
+                       <li>Click Module Config on the left side</li>
+                       <li>Click Neighbor Info at the top</li>
+                       <li>Turn "Enabled" to on</li>
+                       <li>Enter 900 as the update interval</li>
+                       <li>Click save in the upper right corner (floppy disk icon)</li>
+                       <li>Device will reboot - turn bluetooth back on your mobile device</li>
+                    </ol>
+                    <li>Say Hi!</li>
+                    <ol>
+                        <li>Open the app</li>
+                        <li>Click Messages</li>
+                        <li>Click Channels</li>
+                        <li>Click Primary Channel</li>
+                        <li>Type a message</li>
+                    </ol>
                 </ol>
             </section>
             <section id="best-practices">
                 <h2>Best practices</h2>
                 <h3>TL;DR;</h3>
                 <ul>
+                    
                     <!--<li><strong>MQTT</strong>: Disabled;Ignore;</li>-->
                     <li><strong>Role</strong>: Client (<strong>NOT</strong> Router & Client)</li>
                     <li><strong>Hop Count</strong>: 4</li>
-                    <li><strong>Broadcast intervals</strong>(info, position, telemetry): 2 hours</li>
+                    <li><strong>Broadcast intervals</strong>(info, position, telemetry): 1 hour</li>
                 </ul>
-                <p>This is a community driven project, following these guidelines will ensure the best experience for everyone as we continue to grow. (credit @Nick, @AdvJosh (TEX#) - KJ5FZD, @edsai KI5OSB)</p>
+                <p>This is a community driven project, following these guidelines will ensure the best experience for everyone as we continue to grow.</p>
                 <!--<h3>MQTT</h3>
                 <p>The vast majority of us have chosen not to use MQTT with Meshtastic in the spirit of building out a stronger RF based mesh network, instead of relying on the internet to patch coverage gaps. We also recommend setting your nodes to ignore any MQTT traffic.</p>
                 <p>If you use a busy MQTT server/topic it can quickly overwhelm your node and flood the entire network with traffic rendering local communications difficult or impossible. Additionally, using MQTT can give us a false sense of how robust our local RF network is, make it difficult to optimize, diagnose issues and plan future network expansion. Our goal is to build a robust, reliable off grid network that can be utilized by our community during internet/power outages.</p>-->
@@ -151,7 +271,7 @@
                 <h4>Position</h4>
                 <p>Broadcast Interval: 1 Hour, Enable Smart Position, Minimum Interval: One Minute, Minimum Distance: 100, Position Flags: Disable all flags that are not explicitly needed for your use case.</p>
                 <h4>Telemetry (Sensors) Config</h4>
-                <p>Device Metrics: 2 Hours, Sensor Metrics: 1 Hour</p>
+                <p>Device and Sensor Metrics: 1 Hour</p>
             </section>
         </main>
         <footer>
