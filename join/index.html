@@ -102,10 +102,7 @@
 
             <section id="group">
                 <h2>Join the group</h2>
-                <p>Outside of the mesh network itself, we're most active in our public <a href="https://discord.gg/AUjz5RGGVu" target="_blank">Discord Server</a>.<!-- You can <a href="mailto:info@austinmesh.org">email us</a> to be added to our mailing list for our in-person meetings in Austin. You can also follow us on <a href="https://twitter.com/AustinMeshOrg" target="_blank">Twitter</a>,
-                <a href="https://www.instagram.com/p/Cq0jOpYLpZy/" target="_blank">Instagram</a>,
-                <a href="https://www.tiktok.com/@austinmesh.org" target="_blank">TikTok</a>,
-                <a href="https://youtube.com/channel/UCtFl5gdwv0SdrP8sHlDMKNA">YouTube</a>, or join our <a href="https://discord.gg/6a5Sv2s9bG" target="_blank">Discord</a>.</p>-->
+                <p>Outside of the mesh network itself, we're most active in our public <a href="https://discord.gg/AUjz5RGGVu" target="_blank">Discord Server</a>.
             </section>
             
             <section id="network">
@@ -139,6 +136,7 @@
                         <li>Use Preset: on</li>
                         <li>Presets: Long Range - Fast</li>
                         <li>Ignore MQTT: off</li>
+                        <li>OK to MQTT: on</li>
                         <li>Transmit Enabled: on</li>
                         <li>Number of hops: 4</li>
                         <li>Frequency Slot: 0</li>
@@ -153,17 +151,16 @@
                         <li>Click on Primary Channel</li>
                         <li>Do not modify channel details</li>
                         <li>Postions Enabled: on</li>
-                        <li>Approximate Location: 0.2mi (larger if you have privacy concerns)</li>
+                        <li>Approximate Location: 0.9mi</li>
                         <li>MQTT Uplink Enabled: on</li>
                         <li>MQTT Downlink Enabled: on</li>
                         <li>Click Save</li>
                         <li>Click Add Channel</li>
-                        <li>Name: NCMesh  (case sensitive!)</li>
+                        <li>Name: NCMesh  (no space, case sensitive!)</li>
                         <li>Key Size: Default</li>
                         <li>Key: AQ== (this should be automatically entered when you select "Default" under "Key Size")</li>
                         <li>Channel Role: Secondary</li>
-                        <li>Allow Position Requests: On</li>
-                        <li>Approximate Location: 0.2mi (larger if you have privacy concerns)</li>
+                        <li>Allow Position Requests: Off</li>
                         <li>MQTT Uplink Enabled: on</li>
                         <li>MQTT Downlink Enabled: on</li>
                         <li>Click Save</li>
@@ -179,46 +176,35 @@
                         <li>Device Role: Client</li>
                         <li>Rebroadcast Mode: All</li>
                         <li>Node Info Broadcast Inteval: One Hour</li>
-                        <li>Double Tap as Button: off</li>
-                        <li>LED Heartbeat: off if using a solar or battery powered device (to conserve energy)</li>
-                        <li>Serial Console: on</li>
-                        <li>Debug Log: off</li>
-                        <li>Time zone: leave at default</li></lo>
-                        <li>Button GPIO: Unset</li>
-                        <li>Buzzer GPIO: Unset</li>
+                        <li>All other options can usually be left at their defaults</li>
                     </ul>
                     <li>Settings -> Position</li>
                     <ul>
-                        <li>Broadcast Interval: 1 hour</li>
+                        <li>Broadcast Interval: 30 minutes</li>
                         <li>Smart Position: on</li>
                         <li>Minimum Interval: Ten Minutes</li>
                         <li>Minimum Distance: 100</li>
                         <li>Device GPS: Enabled if your device has GPS, Not Present if your device does not</li>
                         <li>Update Interval: Five Minutes</li>
                         <li>Position Flags: Only enable metrics you need.  Suggest enabling altitude and # of satellites only.</li>
-                        <li>Altitude is mean sea level: on</li>
-                        <li>Altitude geoidal separation: off</li>
-                        <li>Dilution of precision: on</li>
-                        <li>If DOP is set, use HDOP: off</li>
-                        <li>Advanced device GPS: all options should be "Unset"</li>
+                        <li>Advanced options can usually be left at their defaults</li>
                     </ul>
                     <li>Settings -> MQTT</li>
                     <ul>
                         <li>Enabled: on</li>
                         <li>MQTT Client Proxy: on</li>
-                        <li>Disconnect from MQTT: on (if it says connect to mqtt, click the slider and it will say disconnect instead)</li>
                         <li>Encryption Enabled: on</li>
+                        <li>JSON Enabled: off</li>
                         <li>Map Report, Enabled: on</li>
                         <li>Map Publish Interval: One Hour</li>
-                        <li>Precise location: off</li>
-                        <li>Approximate location: 0.2mi</li>
+                        <li>Approximate location: 0.9mi</li>
                         <li>Root Topic: msh/US (case sensitive)</li>
                         <li>Address: mqtt.ncmesh.net</li>
                         <li>Username: meshdev</li>
                         <li>Password: large4cats</li>
                         <li>TLS Enabled: off</li>
                     </ul>
-                    <li>Extra Credit - Neighbor Info Broadcast (Optional!)</li>
+                    <li>Please ENABLE Neighbor Info Broadcast to help with RF network diagnostics!</li>
                     <ol>
                        <li>Turn off bluetooth on your mobile device or disconnect from your node in-app</li>
                        <li>Get a laptop or desktop computer with Google Chrome and Bluetooth</li>
@@ -232,7 +218,7 @@
                        <li>Turn "Enabled" to on</li>
                        <li>Enter 900 as the update interval</li>
                        <li>Click save in the upper right corner (floppy disk icon)</li>
-                       <li>Device will reboot - turn bluetooth back on your mobile device</li>
+                       <li>Turn bluetooth back on (on your mobile device)</li>
                     </ol>
                     <li>Say Hi!</li>
                     <ol>
