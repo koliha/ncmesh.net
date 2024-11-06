@@ -155,7 +155,6 @@
                         <li>Click Save</li>
                     </ul>
                     <li>Settings -> Channels</li>
-                    <!--Click <a href="https://discord.com/channels/1282092123948191804/1282110474493624404/1283826431037673605">this link</a> from your mobile device to automatically set channels, or manually configure:<br>-->
                     <ul>
                         <li>Click on Primary Channel</li>
                         <li>Do not modify channel details</li>
@@ -195,14 +194,14 @@
                     </ul>
                     <li>Settings -> Position</li>
                     <ul>
-                        <li>Broadcast Interval: 30 minutes</li>
+                        <li>Broadcast Interval: 60 minutes</li>
                         <li>Smart Position: on</li>
-                        <li>Minimum Interval: Ten Minutes</li>
+                        <li>Minimum Interval: 30 Minutes</li>
                         <li>Minimum Distance: 100</li>
                         <li>Device GPS: Enabled if your device has GPS, Not Present if your device does not</li>
-                        <li>Update Interval: Five Minutes</li>
-                        <li>Position Flags: Only enable metrics you need.  Suggest enabling altitude and # of satellites only.</li>
-                        <li>Advanced options can usually be left at their defaults</li>
+                        <li>Update Interval: 30 Minutes</li>
+                        <li>Position Flags: Only enable metrics you need.  Suggest enabling altitude, satellites, and timestamp only.</li>
+                        <li>All other options can usually be left at their defaults</li>
                     </ul>
                     <li>Settings -> MQTT</li>
                     <ul>
@@ -255,7 +254,6 @@
                         <li>Click send, click close, and click the back arrow at the top</li>
                     </ul>
                     <li>Channels</li>
-                    <!--Click <a href="https://discord.com/channels/1282092123948191804/1282110474493624404/1283826431037673605">this link</a> from your mobile device to automatically set channels, or manually configure:<br>-->
                     <ul>
                         <li>Click on LongFast</li>
                         <li>Do not modify channel details</li>
@@ -286,15 +284,15 @@
                             <li>If you have a stationary node that is well placed (2nd floor window, roof, attic): <u>Client</u></li>
                             <li>If you have multiple nodes for camping/poor cell service/innawoods/etc: <u>Client</u> </li>
                         </ul>
+                        <li>NodeInfo broadcast interval: 3600 Seconds</li>
                         <li>All other options can usually be left at their defaults</li>
-                        <li>If the role was changed, scroll down, click send, click close, and click the back arrow at the top</li>
-                        <li>If the role was not changed, click the back arrow at the top</li>
+                        <li>Scroll down, click send, click close, and click the back arrow at the top</li>
                     </ul>
                     <li>Position</li>
                     <ul>
-                        <li>Position Broadcast Interval: 1800 Seconds</li>
-                        <li>Smart broadcast minimum interval: 600 Seconds</li>
-                        <li>GPS Update Interval: 300 Seconds</li>
+                        <li>Position Broadcast Interval: 3600 Seconds</li>
+                        <li>Smart broadcast minimum interval: 1800 Seconds</li>
+                        <li>GPS Update Interval: 1800 Seconds</li>
                         <li>Scroll down and click send, close, and then click the back arrow at the top</li>
                     </ul>
                     <li>LoRa</li>
@@ -348,9 +346,7 @@
                 <h3>Device Config</h3>
                 <p>Node Info Broadcast Interval: 1 Hour</p>
                 <h3>Position</h3>
-                <p>Broadcast Interval: 1 Hour, Enable Smart Position, Minimum Interval: One Minute, Minimum Distance: 100, Position Flags: Disable all flags that are not explicitly needed for your use case.</p>
-                <h3>Telemetry (Sensors) Config</h3>
-                <p>Device and Sensor Metrics: 1 Hour</p>
+                <p>Broadcast Interval: 1 Hour, Enable Smart Position, Minimum Interval: 30 Minutes, Minimum Distance: 100, GPS Update Interval: 30 Minutes, Position Flags: Disable all flags that are not explicitly needed for your use case.</p>
                 <h3>MQTT</h3>
                 <p>Opinions on using MQTT with Meshstastic are widely varied.  Some Meshtastic users and groups have chosen not to use MQTT with Meshtastic in the spirit of building out a stronger RF based mesh network.  Building out RF coverage is a noble goal that we all share, but we feel that MQTT has a lot of utility (especially in the early days of mesh building).
                 <p>We use MQTT to bridge RF gaps in order to connect pockets of users throughout the state into a single mesh.  We also leverage MQTT for hop count reduction.  7+ hops from Raliegh to Asheville can be reduced to two hops through MQTT (node->raleigh router->asheville router->node)</p>
